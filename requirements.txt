@@ -1,0 +1,4 @@
+roboflow
+super-gradients
+supervision
+ultralytics==8.0.196
