@@ -1,4 +1,5 @@
 import locale
+import torch
 from roboflow import Roboflow
 
 from super_gradients.training import models
@@ -14,7 +15,7 @@ from typing import List, Dict
 
 
 locale.getpreferredencoding = lambda: "UTF-8"
-
+torch.cuda.set_device(0)
 
 rf = Roboflow(api_key="VvcEs35JKM2WFJY30ijR")
 project = rf.workspace("tesis-8euxs").project("tesis-yolo")
@@ -45,8 +46,8 @@ class config:
 
     # Model
     DATALOADER_PARAMS: Dict = {
-    'batch_size': 5,
-    'num_workers': 1
+    'batch_size': 32,
+    'num_workers': 4
     }
     MODEL_NAME: str = 'yolo_nas_l'
     PRETRAINED_WEIGHTS: str = 'coco'
