@@ -15,11 +15,11 @@ from typing import List, Dict
 
 locale.getpreferredencoding = lambda: "UTF-8"
 
-"""
+
 rf = Roboflow(api_key="VvcEs35JKM2WFJY30ijR")
 project = rf.workspace("tesis-8euxs").project("tesis-yolo")
 dataset = project.version(1).download("yolov8")
-"""
+
 
 
 
@@ -98,7 +98,7 @@ def main():
         "zero_weight_decay_on_bias_and_bn": True,
         "ema": True,
         "ema_params": {"decay": 0.9, "decay_type": "threshold"},
-        "max_epochs": 40,
+        "max_epochs": 50,
         "mixed_precision": True,
         "loss": PPYoloELoss(
             use_static_assigner=False,
