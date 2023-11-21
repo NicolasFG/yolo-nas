@@ -10,7 +10,4 @@ module load python/3.9.18
 export PATH=/usr/local/cuda-12.2/targets/x86_64-linux/lib:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64:$LD_LIBRARY_PATH
 export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:100
-module load miniconda/3.0
-conda activate my-env
 python3 main.py 
-conda deactivate
