@@ -1,5 +1,5 @@
 roboflow
 super-gradients
+torch==1.9.0
 supervision
 ultralytics==8.0.196
-pytorch
